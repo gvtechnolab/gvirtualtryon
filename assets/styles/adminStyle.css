@@ -1,0 +1,110 @@
+.clear{
+	clear: both;
+}
+.clear:after,.clear:before{
+	display: block;
+	content: '';
+	clear: both;
+}
+#gvtryon_admin_canvas_container{
+	width: 400px;
+	height:  300px;
+	display: block;
+	background-color: ivory;
+	position: relative;
+}
+#gvtryon_admin_canvas_container canvas{
+	width: 100%;
+	height: 100%;
+	border: 1px solid cyan;
+	background: transparent;
+	position: relative;
+	z-index: 2;
+}
+#gvtryon_admin_canvas_container #gvtryon_admin_tryon_modal{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: transparent;
+	z-index: 1;
+}
+.gvtryon_edit_virtual{
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #333;
+	min-height: 300px;
+}
+.gvtryon_edit_virtual .gvtryon_hidden_inputs{
+	display: none;
+}
+.gvtryon_edit_virtual[data-isEdit="true"] .gvtryon_hidden_inputs{
+	display: block;
+}
+#gvtryon_admin_canvas_container{float: left;}
+.gvtryon_admin_canvas_variables{
+	float: right;
+	width: 40%;
+}
+.gvtryon_edit_buttons{
+	padding: 10px 0;
+}
+.gvtryon_hidden_inputs label{
+	margin-bottom:  5px;
+	display: inline-block;
+	width: 100%;
+}
+.gvtryon_hidden_inputs label strong{
+	width:  120px;
+	display: inline-block;
+}
+@media (max-width: 768px){
+	#gvtryon_admin_canvas_container,
+	.gvtryon_admin_canvas_variables{
+		float: none;
+		width: 100%;
+
+	}
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.gvtryon_edit_virtual.loading:after{
+	position: absolute;
+	left:  0;
+	right: 0;
+	top:  0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: block;
+	content: '';
+	z-index: 100;
+}
+.gvtryon_edit_virtual.loading:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	border: 8px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 8px solid #3498db;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+	z-index: 101;
+}
