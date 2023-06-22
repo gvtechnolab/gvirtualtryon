@@ -510,7 +510,7 @@ body.scrollof {
 @media (max-width: 539px) {
   .gvtryon_content_wrap {
     position: relative;
-    height: 90%;
+    height: 100%;
   }
   /*.gvtryon_content_wrap .switch-wrap{
 		position: absolute;

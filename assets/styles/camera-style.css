@@ -95,8 +95,14 @@
 
 #gvtryon_switch_camera_button {
   display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   background-image: url("../img/ic_camera_rear_white_36px.svg");
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #gvtryon_switch_camera_button[aria-pressed="true"] {
@@ -142,7 +148,7 @@
     */
   #gvtryon_vid_container {
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
   #gvtryon_gui_controls {
     width: 100%;
