@@ -1,12 +1,14 @@
 <?php
 /**
- * Plugin Name: G Virtual Try On
- * Description: Product Try On give vitrualy environment to user for try eyeglasses virtualy from product page.
- * Version: 1.0 
- * Author: Girirajsinh Gohil
- * Author URI: https://gvtechnolab.in
- * License: GPL2
- * Text Domain: gvtryon
+ * Plugin Name:       G Virtual Tryon
+ * Plugin URI:        https://gvirtualtryon.gvtechnolab.in
+ * Description:       G Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.
+ * Version:           1.0
+ * Author:            GV Technolab
+ * Author URI:        https://gvtechnolab.in
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       gvtryon
  */
 
 if (!defined('ABSPATH'))
@@ -131,7 +133,7 @@ if (!function_exists('gvtryon_install_woocommerce_admin_notice')) {
         ?>
         <div class="error">
             <p>
-                <?php echo esc_html('G Virtual Try On ' . __('is enabled but not effective. It requires WooCommerce to work.', 'veyewtryon')); ?>
+                <?php echo esc_html('G Virtual Try On ' . __('is enabled but not effective. It requires WooCommerce to work.', 'gvtryon')); ?>
             </p>
         </div>
         <?php
