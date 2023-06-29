@@ -30,8 +30,8 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
     {
         //create new top-level menu
         add_menu_page(
-            __('G Virtual Tryon', 'gvtryon'),
-            __('G Virtual Tryon', 'gvtryon'),
+            __('GFit Virtual Tryon', 'gvtryon'),
+            __('GFit Virtual Tryon', 'gvtryon'),
             'manage_options',
             'gvtryon',
             array($this, 'create_admin_page'),
@@ -50,7 +50,7 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
         ?>
         <div class="gvtryon-wrapper">
             <div class="gvtryon-header">
-                <h2><?php echo __('G Virtual Tryon', 'gvtryon'); ?></h2>
+                <h2><?php echo __('GFit Virtual Tryon', 'gvtryon'); ?></h2>
                 <a target="_blank" href="https://gvtechnolab.in"><img src="<?php echo GVTRYON_PLUGIN_URL; ?>/assets/img/GV-Technolab.png" alt="Gv Technolab"></a>
             </div>
             <div class="gvtryon-content">
@@ -64,7 +64,7 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
                 </form>
             </div>
             <div class="gvtryon-footer">
-                <h3>G Virtual Tryon</h3>
+                <h3>GFit Virtual Tryon</h3>
                 <div>Developed By: <a target="_blank" href="https://gvtechnolab.in">Gv Technolab</a></div>
             </div>
         </div>
@@ -85,7 +85,7 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
         add_settings_section(
             'gvtryon_settings',
             '',
-            // __('G Virtual Tryon Settings', 'gvtryon'),
+            // __('GFit Virtual Tryon Settings', 'gvtryon'),
             array($this, 'print_section_info'),
             'gvtryon_plugin_setting'
         );
@@ -118,7 +118,7 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
      */
     public function print_section_info()
     {
-        // print 'Enter G Virtual Tryon Settings below:';
+        // print 'Enter GFit Virtual Tryon Settings below:';
     }
 
     /** 

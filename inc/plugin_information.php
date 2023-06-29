@@ -6,10 +6,10 @@ defined('ABSPATH') || exit;
 <div class="gvtryon_content_container">
     <div class="gvtryon_content_block">
         <h2 class="gvtryon_content_block__title">
-            <?php echo __("About G Virtual Tryon plugin", 'gvirtualtryon'); ?>
+            <?php echo __("About GFit Virtual Tryon plugin", 'gvirtualtryon'); ?>
         </h2>
         <div class="gvtryon_content_block__content">
-            <p>G Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.</p>
+            <p>GFit Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.</p>
             <p>with a simple step, anyone can user this plugin without having coding knowledge</p>
         </div>
     </div>
@@ -22,10 +22,10 @@ defined('ABSPATH') || exit;
 
                 <ul>
                     <li>Go to Products Edit/New product page</li>
-                    <li>Scroll down to metabox(fields group) titled with "G Virtual Frames"</li>
+                    <li>Scroll down to metabox(fields group) titled with "GFit Virtual Frames"</li>
                     <li>Here upload frame image by pressing upload image button</li>
                     <li>Once image is selected and uploaded Save product once so system can process calculations.</li>
-                    <li>Once you Save product again check in G Virtual Frames metabox you can see dummy face will have
+                    <li>Once you Save product again check in GFit Virtual Frames metabox you can see dummy face will have
                         frame <br />
                         on that you have just uploaded.</li>
                     <li>If you feel the frame is not at exact position on dummy face you can drag it to currect it's

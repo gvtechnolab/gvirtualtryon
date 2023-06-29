@@ -1,6 +1,6 @@
-=== G Virtual Tryon ===
+=== GFit Virtual Tryon ===
 Contributors: girirajsinh
-Tags: virtual tryon, virtual products view, woocommerce product
+Tags: GFit, virtual tryon, virtual products view, woocommerce product
 Requires at least: 5.5
 Tested up to: 6.1
 Requires PHP: 5.5
@@ -8,7 +8,7 @@ Stable tag: 1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-G Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.
+GFit Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.
 
 == Description ==
 
@@ -20,7 +20,7 @@ G Virtual Tryon plugin allows your customer to virtually experience your product
 
 - responsive design to support mobile and desktop screens.
 
-- G Virtual try-on works great on Chrome, Opera and Safari browsers
+- GFit Virtual try-on works great on Chrome, Opera and Safari browsers
 
 
 == Key Features ==
@@ -34,13 +34,13 @@ Installation Via WordPress Admin Area
 1. Log into your WordPress admin area.
 1. Go to Dashboard » Plugin.
 1. Click on Add New Plugin button at top.
-1. Search for “G Virtual Tryon”.
-1. Now click on “Install Now” button of the “G Virtual Tryon” plugin.
+1. Search for “GFit Virtual Tryon”.
+1. Now click on “Install Now” button of the “GFit Virtual Tryon” plugin.
 1. Click on Activate once the plugin is installed.
 
 Installation Using FTP
 
-1. Download the gvirtualtryon.zip’ file.
+1. Download the gfitvirtualtryon.zip’ file.
 1. Extract Zip file.
 1. Using your FTP program, upload the non-zipped plugin folder into the “/wp-content/plugins/” folder.
 1. Activate the plugin through the ‘Plugins’ menu in WordPress.

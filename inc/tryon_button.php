@@ -16,7 +16,7 @@ function gvtryon_popup_callback_primary()
 					<div class="gvtryon_header">
 						<button type="button" id="gvtryon_close_button">&times;</button>
 						<h3>
-							<?php echo __('G Virtual TryOn', 'gvtryon'); ?>
+							<?php echo __('GFit Virtual TryOn', 'gvtryon'); ?>
 						</h3>
 						<span></span>
 					</div>
@@ -74,7 +74,7 @@ function gvtryon_popup_callback_primary()
 						</ul>
 						<!-- <div class="static_errorPopup tooltip">Info
 							<span class="tooltiptext">
-								<?php // echo __('G Virtual try-on works only on Chrome, Opera and Safari browsers', 'gvtryon'); ?>
+								<?php // echo __('GFit Virtual try-on works only on Chrome, Opera and Safari browsers', 'gvtryon'); ?>
 							</span>
 						</div> -->
 					</div>

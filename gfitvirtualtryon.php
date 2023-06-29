@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       G Virtual Tryon
+ * Plugin Name:       GFit Virtual Tryon
  * Plugin URI:        https://gvirtualtryon.gvtechnolab.in
- * Description:       G Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.
+ * Description:       GFit Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.
  * Version:           1.0
  * Author:            GV Technolab
  * Author URI:        https://gvtechnolab.in
@@ -133,7 +133,7 @@ if (!function_exists('gvtryon_install_woocommerce_admin_notice')) {
         ?>
         <div class="error">
             <p>
-                <?php echo esc_html('G Virtual Try On ' . __('is enabled but not effective. It requires WooCommerce to work.', 'gvtryon')); ?>
+                <?php echo esc_html('GFit Virtual Try On ' . __('is enabled but not effective. It requires WooCommerce to work.', 'gvtryon')); ?>
             </p>
         </div>
         <?php
