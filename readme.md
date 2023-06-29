@@ -1,4 +1,5 @@
 ## GFit Virtual Tryon
+
 Contributors: girirajsinh
 Tags: GFit, virtual tryon, virtual products view, woocommerce product
 Requires at least: 5.5
