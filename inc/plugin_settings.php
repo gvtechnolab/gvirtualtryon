@@ -1,13 +1,13 @@
 <?php
 /**
- * GVTRYON_PluginSettings.
+ * GVIRTUALTRYON_PLUGIN_SETTINGS.
  *
- * @package GVTRYON_PluginSettings
+ * @package GVIRTUALTRYON_PLUGIN_SETTINGS
  */
 
 defined('ABSPATH') || exit;
 
-class GVTRYON_PluginSettings
+class GVIRTUALTRYON_PLUGIN_SETTINGS
 {
     /**
      * Holds the values to be used in the fields callbacks
@@ -30,13 +30,13 @@ class GVTRYON_PluginSettings
     {
         //create new top-level menu
         add_menu_page(
-            __('G Virtual Tryon', 'gvtryon'),
-            __('G Virtual Tryon', 'gvtryon'),
+            __('GFit Virtual Tryon', 'gvtryon'),
+            __('GFit Virtual Tryon', 'gvtryon'),
             'manage_options',
             'gvtryon',
             array($this, 'create_admin_page'),
-            // 'dashicons-schedule',
-            // plugins_url('/images/icon.png', __FILE__),
+            'dashicons-image-filter',
+            // plugins_url('/assets/img/icon.png', __FILE__),
             50
         );
     }
@@ -49,18 +49,23 @@ class GVTRYON_PluginSettings
         // $this->options = get_option('gvtryon_setting');
         ?>
         <div class="gvtryon-wrapper">
-            <h1 class="gvtryon-header">
-                <?php echo __('G Virtual Tryon', 'gvtryon'); ?>
-            </h1>
+            <div class="gvtryon-header">
+                <h2><?php echo __('GFit Virtual Tryon', 'gvtryon'); ?></h2>
+                <a target="_blank" href="https://gvtechnolab.in"><img src="<?php echo GVTRYON_PLUGIN_URL; ?>/assets/img/GV-Technolab.png" alt="Gv Technolab"></a>
+            </div>
             <div class="gvtryon-content">
                 <form method="post" action="options.php">
                     <?php
                     settings_fields('gvtryon_plugin_setting_group');
                     do_settings_sections('gvtryon_plugin_setting');
                     // submit_button("");
+                    include_once(GVTRYON_PLUGIN_PATH . '/inc/plugin_information.php');
                     ?>
-                    <h4>information and guide how to use the plugin</h4>
                 </form>
+            </div>
+            <div class="gvtryon-footer">
+                <h3>GFit Virtual Tryon</h3>
+                <div>Developed By: <a target="_blank" href="https://gvtechnolab.in">Gv Technolab</a></div>
             </div>
         </div>
         <?php
@@ -80,7 +85,7 @@ class GVTRYON_PluginSettings
         add_settings_section(
             'gvtryon_settings',
             '',
-            // __('G Virtual Tryon Settings', 'gvtryon'),
+            // __('GFit Virtual Tryon Settings', 'gvtryon'),
             array($this, 'print_section_info'),
             'gvtryon_plugin_setting'
         );
@@ -113,7 +118,7 @@ class GVTRYON_PluginSettings
      */
     public function print_section_info()
     {
-        // print 'Enter G Virtual Tryon Settings below:';
+        // print 'Enter GFit Virtual Tryon Settings below:';
     }
 
     /** 
@@ -135,4 +140,4 @@ class GVTRYON_PluginSettings
 }
 
 if (is_admin())
-    $gvtryon_plugin_setting_page = new GVTRYON_PluginSettings();
+    $gvtryon_plugin_setting_page = new GVIRTUALTRYON_PLUGIN_SETTINGS();

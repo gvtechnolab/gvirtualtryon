@@ -6,7 +6,7 @@ if (!defined('ABSPATH'))
 // Register meta box for food_locker post type
 function gvtryon_set_frame_upload_metabox()
 {
-	add_meta_box('gvtryon_frame_upload_meta_box', __('G Virtual Frames', PLUGIN_TEXT_DOMAIN), 'gvtryon_frame_uplod_meta_box_callback', 'product', 'normal', 'low');
+	add_meta_box('gvtryon_frame_upload_meta_box', __('GFit Virtual Frames', PLUGIN_TEXT_DOMAIN), 'gvtryon_frame_uplod_meta_box_callback', 'product', 'normal', 'low');
 }
 add_action('add_meta_boxes', 'gvtryon_set_frame_upload_metabox');
 

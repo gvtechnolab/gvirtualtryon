@@ -1,6 +1,5 @@
-
 #gvtryon_vid_container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -13,14 +12,16 @@
 }
 
 #gvtryon_gui_controls {
-  position: fixed;
-  background-color: #111; /*rgba(255, 0, 0, 0.5);*/
+  position: absolute;
   z-index: 2;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #video_overlay {
-  position: fixed;
+  position: absolute;
   display: block;
   width: 100%;
   height: 100%;
@@ -50,42 +51,94 @@
   z-index: 2;
 }*/
 
-/*#gvtryon_take_photo_button {
+#gvtryon_take_photo_button {
   left: calc(50% - 40px);
   top: calc(50% - 40px);
   width: 80px;
   height: 80px;
-  background-image: url('../img/ic_photo_camera_white_48px.svg');
+  background-image: url("../img/ic_photo_camera_white_48px.svg");
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center center;
 }
-*/
+
 /*#gvtryon_take_photo_button:active {
   background-color: #fff;
 }*/
-
-/*#gvtryon_toggle_full_screen_button {
-  display: none;
-  width: 64px;
-  height: 64px;
-  background-image: url('../img/ic_fullscreen_white_48px.svg');
+#gvtryon_start_camera_button,
+#gvtryon_stop_camera_button {
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/ic_photo_camera_white_48px.svg");
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#gvtryon_toggle_full_screen_button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  background-image: url("../img/ic_fullscreen_white_48px.svg");
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-#gvtryon_toggle_full_screen_button[aria-pressed='true'] {
-  background-image: url('../img/ic_fullscreen_exit_white_48px.svg');
+#gvtryon_toggle_full_screen_button[aria-pressed="true"] {
+  background-image: url("../img/ic_fullscreen_exit_white_48px.svg");
 }
-*/
+
 #gvtryon_switch_camera_button {
   display: none;
-  /*background-image: url('../img/ic_camera_rear_white_36px.svg');*/
-  /*background-color: rgba(0, 0, 0, 0.5);*/
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-image: url("../img/ic_camera_rear_white_36px.svg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-/*#gvtryon_switch_camera_button[aria-pressed='true'] {
-  background-image: url('../img/ic_camera_front_white_36px.svg');
-}*/
+#gvtryon_switch_camera_button[aria-pressed="true"] {
+  background-image: url("../img/ic_camera_front_white_36px.svg");
+}
+
+#gvtryon_download_snap {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-image: url("../img/ic_download_white_36px.svg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#gvtryon_set_frame_photo_button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-image: url("../img/ic_scan_face_white.svg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#gvtryon_clear_frame_button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-image: url("../img/ic_reset_white.svg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 @media screen and (orientation: portrait) {
   /* portrait-specific styles */
@@ -95,11 +148,11 @@
     */
   #gvtryon_vid_container {
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
   #gvtryon_gui_controls {
     width: 100%;
-    height: 150px;
+    height: 60px;
     left: 0;
   }
   /*#gvtryon_switch_camera_button {*/
@@ -115,8 +168,9 @@
 
 @media screen and (orientation: landscape) {
   #gvtryon_vid_container {
-    width: 80%;
+    width: 100%;
     height: 100%;
+    display: flex;
   }
 
   #gvtryon_vid_container.left {
@@ -124,9 +178,10 @@
   }
   /* we default to right */
   #gvtryon_gui_controls {
-    width: 20%;
-    height: 100%;
+    width: 100%;
+    height: 60px;
     right: 0;
+    left: 0;
   }
 
   /* for the lefties */
