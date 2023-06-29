@@ -1,14 +1,5 @@
 ## GFit Virtual Tryon
 
-Contributors: girirajsinh
-Tags: GFit, virtual tryon, virtual products view, woocommerce product
-Requires at least: 5.5
-Tested up to: 6.1
-Requires PHP: 5.5
-Stable tag: gfit-vitrual-tryon
-License: GPLv3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
-
 The GFit Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on the customer\'s device.
 
 # Description
