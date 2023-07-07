@@ -1,3 +1,4 @@
+
 .clear {
   clear: both;
 }
@@ -50,9 +51,7 @@
   float: right;
   width: 40%;
 }
-.gvtryon_edit_buttons {
-  padding: 10px 0;
-}
+
 .gvtryon_hidden_inputs label {
   margin-bottom: 5px;
   display: inline-block;
@@ -119,6 +118,8 @@
   z-index: 101;
 }
 #gvtryon_upl_button {
+  
+  border-style: none;
   background: #3498db;
   color: #ffffff;
   padding: 5px 10px;
@@ -227,3 +228,117 @@
   color: #000000;
   font-style: italic;
 }
+
+
+/* My Style sheets*/
+
+/* Image upload section css*/
+
+/* .gvtryon_image_upload{
+  border-bottom: 1px solid black;
+} */
+
+.gvtryon_upload_msg{
+  display: block;
+  text-align: center;
+  font-size: 15px;
+}
+
+.gvtryon_image_upload p{
+  text-align: center;
+  font-size: 30px;
+  margin:0;
+  /* background-color: red; */
+}
+
+.gvtryon_image_upload_section{
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gvtryon_frame_image_subsection{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* frame setting section css*/
+
+.gvtryon_edit_virtual_heading{
+  margin:10px 0 0 0;
+  text-align: center;
+  font-size: 30px;
+  margin:0;
+}
+
+.gvtryon_edit_virtual_container{
+  margin: 30px 0 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gvtryon_edit_buttons {
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#gvtryon_edit_changes{
+  width: 61.5762px;
+ padding:5px 7px;
+ border-radius: 4px;
+ border: none;
+ margin-right: 3px;
+ background-color: #3498db;
+ color: #fff;
+ font-size: 20px;
+}
+
+#gvtryon_done_changes{
+  padding: 5px 7px;
+  border-radius: 4px;
+  border: none;
+  margin-left: 3px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+/* tabbing css */
+
+[data-tab-content]{
+  display: none;
+}
+
+/* [data-tab-content] */
+.active {
+  display: block;
+}
+
+.gvtryon_tab_container{
+  display: flex;
+  justify-content: center;
+}
+.gvtryon_tab_container li{
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  background-color: #3498db;
+  /* border: 1px solid black; */
+}
+/* .gvtryon_tab_container li+li{
+ margin-left: 5px;
+}  */
+
+.tab.active{
+  background-color: white;
+  color: black;
+  border: 1px solid #3498db;
+}
+/* .tab:hover{
+  background-color: white;
+  color: black;
+} */
