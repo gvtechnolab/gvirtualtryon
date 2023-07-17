@@ -11,9 +11,18 @@ function gvtryon_popup_callback_primary()
 		?>
 		<button id="gvtryon_button" type="button" name="gv_tryon" class="button">Try On</button>
 		<div id="gvtryon_modal" class="gvtryon-modal-wrap">
-			<div id="gvtryon_modal_inner">
-				<div id="container" class="gvtryon_content_wrap">
-					<div class="gvtryon_header">
+			
+			
+			<ul class="gvtryon-popup-tabs">
+				<li class="camera active">Live camera</li>
+				<li class="models">Use model</li>
+			</ul>
+
+			
+			<div id="gvtryon_modal_inner" data-tab-content class= "gvtryon-active-popup-tab ">
+				
+				<div id="container" class="gvtryon_content_wrap" >
+					<div class="gvtryon_header" >
 						<button type="button" id="gvtryon_close_button">&times;</button>
 						<h3>
 							<?php echo __('GFit Virtual TryOn', 'gvtryon'); ?>
@@ -80,8 +89,91 @@ function gvtryon_popup_callback_primary()
 					</div>
 
 				</div>
+
 			</div>
+
+				<!-- use Model section  -->
+				<div id="gvtryon_modal_inner" data-tab-content class="gvtryon-deactive-popup-tab">
+					<div class="model-container">
+							<div class="model-view">Show model</div>
+								<div class="model-selection-container">
+								<div class="model">Model 1</div>
+								<div class="model">Model 2</div>
+								<div class="model">Model 3</div>
+							</div>
+						</div>
+				</div>	
+
+
+
 		</div>
+					
+				<!-- MY SCRIPT-->
+	  
+	 	 <script>
+
+			// select both elements 
+			const cameraTab = document.querySelector('.camera');
+			const modelTab = document.querySelector('.models');
+
+			console.log(cameraTab,modelTab);
+			// cameraTab.style.backgroundColor = "#3498db";
+			
+			// add eventlistener 
+			
+			cameraTab.addEventListener('click',()=>{
+				
+							// const tabContent = document.querySelectorAll('[data-tab-content]');
+							// console.log(tabContent);
+				if(cameraTab.classList.contains('active')){
+					return 0;
+				}else{
+					modelTab.classList.remove("active");
+
+					const tabContents = document.querySelectorAll('[data-tab-content]');
+					// console.log(tabContents);
+
+					tabContents.forEach(tabContent =>{
+						if(tabContent.classList.contains('gvtryon-active-popup-tab')){
+							tabContent.classList.remove('gvtryon-active-popup-tab');
+							tabContent.classList.add('gvtryon-deactive-popup-tab');
+						}else{
+							tabContent.classList.remove('gvtryon-deactive-popup-tab');
+							tabContent.classList.add('gvtryon-active-popup-tab');
+						}
+					});
+					cameraTab.classList.add('active');
+				}
+							
+			});
+			
+			modelTab.addEventListener('click',()=>{
+				if(modelTab.classList.contains('active')){
+					return 0;
+				}else{
+					cameraTab.classList.remove("active");
+
+					const tabContents = document.querySelectorAll('[data-tab-content]');
+					// console.log(tabContents);
+
+					tabContents.forEach(tabContent =>{
+						if(tabContent.classList.contains('gvtryon-active-popup-tab')){
+							tabContent.classList.remove('gvtryon-active-popup-tab');
+							tabContent.classList.add('gvtryon-deactive-popup-tab');
+						}else{
+							tabContent.classList.remove('gvtryon-deactive-popup-tab');
+							tabContent.classList.add('gvtryon-active-popup-tab');
+						}
+					});
+					modelTab.classList.add('active');
+				}
+			});
+
+			
+	  	 </script>
+
+
 		<?php
+	
 	}
 }
