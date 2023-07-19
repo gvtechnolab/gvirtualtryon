@@ -6,7 +6,7 @@ if (!defined('ABSPATH'))
 // Register meta box for food_locker post type
 function gvtryon_set_frame_upload_metabox()
 {
-	add_meta_box('gvtryon_frame_upload_meta_box', __('GFit Virtual Frames', PLUGIN_TEXT_DOMAIN), 'gvtryon_frame_uplod_meta_box_callback', 'product', 'normal', 'low');
+	add_meta_box('gvtryon_frame_upload_meta_box', __('GFit Virtual Frames', 'gfit-vitrual-tryon'), 'gvtryon_frame_uplod_meta_box_callback', 'product', 'normal', 'low');
 }
 add_action('add_meta_boxes', 'gvtryon_set_frame_upload_metabox');
 
@@ -42,10 +42,10 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 
 	<div style="display: block;padding: 10px;border-bottom: 1px solid #333;">
 		<div>
-			<input id="gvtryon_frame_image" name="gvtryon_frame_image" type="text" value="<?php echo $url; ?>" />
+			<input id="gvtryon_frame_image" name="gvtryon_frame_image" type="text" value="<?php echo esc_url($url); ?>" />
 			<input id="gvtryon_upl_button" type="button" value="Upload Image" /><br />
 			<div style="padding: 10px 0;">
-				<img src="<?php echo $url; ?>" style="width:200px;" id="gvtryon_picsrc_img" />
+				<img src="<?php echo esc_url($url); ?>" style="width:200px;" id="gvtryon_picsrc_img" />
 			</div>
 		</div>
 		<small>
@@ -119,16 +119,16 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 function gvtryon_save_product_meta_fields($post_id)
 {
 	if (isset($_POST['gvtryon_frame_image'])) {
-		update_post_meta($post_id, 'gvtryon_frame_image', $_POST['gvtryon_frame_image']);
+		update_post_meta($post_id, 'gvtryon_frame_image', sanitize_text_field($_POST['gvtryon_frame_image']));
 	}
 	if (isset($_POST['gvtryon_frame_width'])) {
-		update_post_meta($post_id, 'gvtryon_frame_width', $_POST['gvtryon_frame_width']);
+		update_post_meta($post_id, 'gvtryon_frame_width', sanitize_text_field($_POST['gvtryon_frame_width']));
 	}
 	if (isset($_POST['gvtryon_standard_face_width'])) {
-		update_post_meta($post_id, 'gvtryon_standard_face_width', $_POST['gvtryon_standard_face_width']);
+		update_post_meta($post_id, 'gvtryon_standard_face_width', sanitize_text_field($_POST['gvtryon_standard_face_width']));
 	}
 	if (isset($_POST['gvtryon_diffY'])) {
-		update_post_meta($post_id, 'gvtryon_diffY', $_POST['gvtryon_diffY']);
+		update_post_meta($post_id, 'gvtryon_diffY', sanitize_text_field($_POST['gvtryon_diffY']));
 	}
 }
 add_action('save_post', 'gvtryon_save_product_meta_fields');
