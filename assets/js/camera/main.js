@@ -242,7 +242,7 @@ async function setfacemashModel() {
 }
 
 function initCameraUI() {
-  video = document.getElementById('video');
+  video = document.getElementById('gvtryon_video');
 
   gvtryon_take_photo_button = document.getElementById('gvtryon_take_photo_button');
   gvtryon_toggle_full_screen_button = document.getElementById('gvtryon_toggle_full_screen_button');
@@ -254,7 +254,7 @@ function initCameraUI() {
     takeSnapshotUI();
     takeSnapshot();
   });
-  var canvas = document.getElementById('video_canvas');
+  var canvas = document.getElementById('gvtryon_video_canvas');
   
 
   context = canvas.getContext('2d');
@@ -408,7 +408,7 @@ function takeSnapshot() {
   // if you'd like to show the canvas add it to the DOM
   // var canvas = document.createElement('canvas');
   jQuery('.gvtryon_content_wrap').addClass('capturedImg');
-  var canvas = document.getElementById('video_cap_canvas');
+  var canvas = document.getElementById('gvtryon_video_cap_canvas');
   var width = video.videoWidth;
   var height = video.videoHeight;
 
@@ -455,7 +455,7 @@ function getanddownloadsnap () {
 function createClickFeedbackUI() {
   // in order to give feedback that we actually pressed a button.
   // we trigger a almost black overlay
-  var overlay = document.getElementById('video_overlay'); //.style.display;
+  var overlay = document.getElementById('gvtryon_video_overlay'); //.style.display;
 
   // sound feedback
   // var sndClick = new Howl({ src: ['snd/click.mp3'] });
@@ -518,7 +518,7 @@ async function setFrameOnImage(){
 }
 
 async function detectFaces(){
-    let inputElement =  document.getElementById('video_canvas');
+    let inputElement =  document.getElementById('gvtryon_video_canvas');
     inputElement.onloadeddata = (event) => {
         console.log('input loaded');
     };
@@ -574,7 +574,7 @@ function onEstimateFacesResult(inputElement,predictions){
             let ffacewidth =  getDistance( fframeLeft, fframeLeftTop, fframeRight, fframeRightTop);
             let angle = getAngle(fframeLeft, fframeLeftTop, fframeRight, fframeRightTop);
             
-            let appendtoOverlayid = '#video_overlay';
+            let appendtoOverlayid = '#gvtryon_video_overlay';
             let standardFrameSizeMM = jQuery(newCloneElement).attr('data-width');
             let standardFaceSizeMM = jQuery(newCloneElement).attr('data-gvtryon_standard_face_width');
             let diffY = jQuery(newCloneElement).attr('data-diffY');
@@ -606,7 +606,7 @@ function onEstimateFacesResult(inputElement,predictions){
 }
 
 function clearOverlay(){
-  let appendtoOverlayid = '#video_overlay';
+  let appendtoOverlayid = '#gvtryon_video_overlay';
   jQuery(appendtoOverlayid).empty();
   jQuery('.gvtryon_content_wrap').removeClass('overlayhascontent');
 }

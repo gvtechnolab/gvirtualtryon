@@ -27,7 +27,7 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 		<input id="gvtryon_frame_width" name="gvtryon_frame_width" type="number" min="80" max="250"
 			value="<?php echo $gvtryon_frame_width; ?>" />
 		<small>
-			<?php echo __('mm'); ?>
+			<?php echo __('mm', 'gfit-vitrual-tryon'); ?>
 		</small>
 	</div>
 	<div style="display: block;padding: 10px;border-bottom: 1px solid #333;">
@@ -35,7 +35,7 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 		<input id="gvtryon_standard_face_width" name="gvtryon_standard_face_width" type="number"
 			value="<?php echo $gvtryon_standard_face_width; ?>" />
 		<small>
-			<?php echo __('mm'); ?>
+			<?php echo __('mm', 'gfit-vitrual-tryon'); ?>
 		</small>
 
 	</div>
@@ -49,10 +49,10 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 			</div>
 		</div>
 		<small>
-			<?php echo __('Upload frames with png format and transparent background'); ?>
+			<?php echo __('Upload frames with png format and transparent background', 'gfit-vitrual-tryon'); ?>
 		</small>
 		<p id="gvtryon_reload_message" style="width: 100%; color:  #ff0000; margin: 10px 0;display: none;">
-			<?php echo __('Please Save/Update Product to view/Edit frame position'); ?>
+			<?php echo __('Please Save/Update Product to view/Edit frame position', 'gfit-vitrual-tryon'); ?>
 		</p>
 
 		<script>
@@ -78,35 +78,36 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 			<div id="gvtryon_admin_tryon_modal" width="400" height="300"></div>
 			<canvas id="gvtryon_admin_tryon_canvas" width="400" height="300"></canvas>
 		</div>
-		<div class="gvtryon_admin_canvas_variables">
+		<input type="submit" name="gvtryon_save_product" id="gvtryon_save_product" class="button button-primary button-large" value="Update">
+		<div class="gvtryon_admin_canvas_variables" style="display: none">
 			<div class="gvtryon_edit_buttons">
 				<button type="button" id="gvtryon_edit_changes">Edit</button>
 				<button type="button" id="gvtryon_done_changes">Done</button>
 			</div>
 			<div class="gvtryon_hidden_inputs">
 				<label style="display: block;">
-					<strong>Width : </strong>
-					<input id="frameWidthO" name="frameWidthO" placeholder="frame width in px" />
+					<strong><?php echo __("Width :", "gfit-vitrual-tryon"); ?> </strong>
+					<input id="frameWidthO" name="frameWidthO" placeholder="Frame width in px" />
 				</label>
 				<label style="display: block;">
-					<strong>Height :</strong>
-					<input id="frameHeightO" name="frameHeightO" placeholder="frame height in px" />
+					<strong><?php echo __("Height :", "gfit-vitrual-tryon"); ?></strong>
+					<input id="frameHeightO" name="frameHeightO" placeholder="Frame height in px" />
 				</label>
 				<label style="display: block;">
-					<strong>PositionX :</strong>
-					<input id="frameMiddelPointX" name="frameMiddelPointX" placeholder="frame left position"
+					<strong><?php echo __("PositionX :", "gfit-vitrual-tryon"); ?></strong>
+					<input id="frameMiddelPointX" name="frameMiddelPointX" placeholder="Frame left position"
 						disabled="true" />
 				</label>
 				<label style="display: block;">
-					<strong>PositionY : </strong>
-					<input id="frameMiddelPointY" name="frameMiddelPointY" placeholder="frame top position" />
+					<strong><?php echo __("PositionY :", "gfit-vitrual-tryon"); ?> </strong>
+					<input id="frameMiddelPointY" name="frameMiddelPointY" placeholder="Frame top position" />
 				</label>
 				<label style="display: block;">
-					<strong>StandardEyeLine : </strong>
+					<strong><?php echo __("StandardEyeLine :", "gfit-vitrual-tryon"); ?> </strong>
 					<input id="StandardEyeLine" name="StandardEyeLine" placeholder="StandardEyeLine" disabled="true" />
 				</label>
 				<label style="display: block;">
-					<strong>diffY : </strong>
+					<strong><?php echo __("DiffY :", "gfit-vitrual-tryon"); ?> </strong>
 					<input id="diffY" name="gvtryon_diffY" placeholder="diffY" value="<?php echo $diffY; ?>" />
 				</label>
 			</div>
@@ -132,6 +133,3 @@ function gvtryon_save_product_meta_fields($post_id)
 	}
 }
 add_action('save_post', 'gvtryon_save_product_meta_fields');
-
-
-?>
