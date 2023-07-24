@@ -30,10 +30,10 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
     {
         //create new top-level menu
         add_menu_page(
-            __('GFit Virtual Tryon', 'gvtryon'),
-            __('GFit Virtual Tryon', 'gvtryon'),
+            __('GFit Virtual Tryon', 'gfit-vitrual-tryon'),
+            __('GFit Virtual Tryon', 'gfit-vitrual-tryon'),
             'manage_options',
-            'gvtryon',
+            'gfit-vitrual-tryon',
             array($this, 'create_admin_page'),
             'dashicons-image-filter',
             // plugins_url('/assets/img/icon.png', __FILE__),
@@ -50,7 +50,7 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
         ?>
         <div class="gvtryon-wrapper">
             <div class="gvtryon-header">
-                <h2><?php echo __('GFit Virtual Tryon', 'gvtryon'); ?></h2>
+                <h2><?php echo __('GFit Virtual Tryon', 'gfit-vitrual-tryon'); ?></h2>
                 <a target="_blank" href="https://gvtechnolab.in"><img src="<?php echo GVTRYON_PLUGIN_URL; ?>/assets/img/GV-Technolab.png" alt="Gv Technolab"></a>
             </div>
             <div class="gvtryon-content">
@@ -85,14 +85,14 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
         add_settings_section(
             'gvtryon_settings',
             '',
-            // __('GFit Virtual Tryon Settings', 'gvtryon'),
+            // __('GFit Virtual Tryon Settings', 'gfit-vitrual-tryon'),
             array($this, 'print_section_info'),
             'gvtryon_plugin_setting'
         );
 
         // add_settings_field(
         //     'gvtryon_activation_key',    // ID
-        //     __('Activation Key', 'gvtryon'), // Title 
+        //     __('Activation Key', 'gfit-vitrual-tryon'), // Title 
         //     array($this, 'gvtryon_key_callback'),    // Callback
         //     'gvtryon_plugin_setting',    // Page
         //     'gvtryon_settings' // Section           

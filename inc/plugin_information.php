@@ -6,7 +6,7 @@ defined('ABSPATH') || exit;
 <div class="gvtryon_content_container">
     <div class="gvtryon_content_block">
         <h2 class="gvtryon_content_block__title">
-            <?php echo __("About GFit Virtual Tryon plugin", 'gvirtualtryon'); ?>
+            <?php echo __("About GFit Virtual Tryon plugin", 'gfit-vitrual-tryon'); ?>
         </h2>
         <div class="gvtryon_content_block__content">
             <p>GFit Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.</p>
@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
     </div>
     <div class="gvtryon_content_block">
         <h2 class="gvtryon_content_block__title">
-            <?php echo __("How to enable tryon for product", 'gvirtualtryon'); ?>
+            <?php echo __("How to enable tryon for product", 'gfit-vitrual-tryon'); ?>
         </h2>
         <div class="gvtryon_content_block__content">
             <div class="gvtryon_product_edit_flow">
@@ -38,7 +38,7 @@ defined('ABSPATH') || exit;
     </div>
     <div class="gvtryon_content_block">
         <h2 class="gvtryon_content_block__title">
-            <?php echo __("Have a new Idea, Contact Us !", 'gvirtualtryon'); ?>
+            <?php echo __("Have a new Idea, Contact Us !", 'gfit-vitrual-tryon'); ?>
         </h2>
         <div class="gvtryon_content_block__content">
             <p>If you require assistance with customizations or wish to hire a developer, please feel free to contact us
