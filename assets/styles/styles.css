@@ -160,6 +160,7 @@ body.scrollof {
 }
 #gvtryon_gui_controls ul {
   padding: 2px;
+  display: flex;
 }
 #gvtryon_gui_controls li {
   float: left;
@@ -167,7 +168,11 @@ body.scrollof {
 #gvtryon_gui_controls li.mode {
   display: block;
 }
-
+#gvtryon_gui_controls .switch-wrap.showIfCameraStart {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
 #gvtryon_gui_controls button {
   border: none;
   background-color: #338aff; /*rgba(255, 255, 255, 0.5);*/
@@ -296,7 +301,7 @@ body.scrollof {
   width: 80px;
   display: inline-block;
 }
-#video_canvas {
+#gvtryon_video_canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -304,10 +309,10 @@ body.scrollof {
   object-fit: cover;
   z-index: 0;
 }
-#gvtryon_vid_container #video {
+#gvtryon_vid_container #gvtryon_video {
   opacity: 0;
 }
-#video_cap_canvas {
+#gvtryon_video_cap_canvas {
   display: none;
   position: absolute;
   top: 0;
@@ -465,7 +470,7 @@ body.scrollof {
 }
 
 .switch-wrap input:checked + label {
-  background: #bada55;
+  background: #338aff;
 }
 
 .switch-wrap input:checked + label:after {

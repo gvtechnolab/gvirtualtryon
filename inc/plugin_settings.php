@@ -1,13 +1,13 @@
 <?php
 /**
- * GVIRTUALTRYON_PLUGIN_SETTINGS.
+ * GVTRYON_PLUGIN_SETTINGS.
  *
- * @package GVIRTUALTRYON_PLUGIN_SETTINGS
+ * @package GVTRYON_PLUGIN_SETTINGS
  */
 
 defined('ABSPATH') || exit;
 
-class GVIRTUALTRYON_PLUGIN_SETTINGS
+class GVTRYON_PLUGIN_SETTINGS
 {
     /**
      * Holds the values to be used in the fields callbacks
@@ -36,7 +36,7 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
             'gfit-vitrual-tryon',
             array($this, 'create_admin_page'),
             'dashicons-image-filter',
-            // plugins_url('/assets/img/icon.png', __FILE__),
+            // '',
             50
         );
     }
@@ -140,4 +140,4 @@ class GVIRTUALTRYON_PLUGIN_SETTINGS
 }
 
 if (is_admin())
-    $gvtryon_plugin_setting_page = new GVIRTUALTRYON_PLUGIN_SETTINGS();
+    $gvtryon_plugin_setting_page = new GVTRYON_PLUGIN_SETTINGS();
