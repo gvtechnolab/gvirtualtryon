@@ -8,7 +8,7 @@
  * Author URI:        https://gvtechnolab.in
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       gfit-vitrual-tryon
+ * Text Domain:       gfit-virtual-tryon
  */
 
 if (!defined('ABSPATH'))
@@ -39,7 +39,7 @@ if (!function_exists('gvtryon_constructor')) {
     function gvtryon_constructor()
     {
 
-        load_plugin_textdomain('gfit-vitrual-tryon', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+        load_plugin_textdomain('gfit-virtual-tryon', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 
         /**
          * add Settings/Information to admin page
@@ -127,7 +127,7 @@ if (!function_exists('gvtryon_install_woocommerce_admin_notice')) {
         ?>
         <div class="error">
             <p>
-                <?php echo esc_html('GFit Virtual Try On ' . __('is enabled but not effective. It requires WooCommerce to work.', 'gfit-vitrual-tryon')); ?>
+                <?php echo esc_html('GFit Virtual Try On ' . __('is enabled but not effective. It requires WooCommerce to work.', 'gfit-virtual-tryon')); ?>
             </p>
         </div>
         <?php

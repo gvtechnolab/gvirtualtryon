@@ -5,21 +5,16 @@ defined('ABSPATH') || exit;
 ?>
 <div class="gvtryon_content_container">
     <div class="gvtryon_content_block">
-        <h2 class="gvtryon_content_block__title">
-            <?php echo __("About GFit Virtual Tryon plugin", 'gfit-vitrual-tryon'); ?>
-        </h2>
+        <h2 class="gvtryon_content_block__title">About GFit Virtual Tryon plugin</h2>
         <div class="gvtryon_content_block__content">
             <p>GFit Virtual Tryon plugin allows your customer to virtually experience your product by using the camera on customer's device.</p>
             <p>with a simple step, anyone can user this plugin without having coding knowledge</p>
         </div>
     </div>
     <div class="gvtryon_content_block">
-        <h2 class="gvtryon_content_block__title">
-            <?php echo __("How to enable tryon for product", 'gfit-vitrual-tryon'); ?>
-        </h2>
+        <h2 class="gvtryon_content_block__title">How to enable tryon for product</h2>
         <div class="gvtryon_content_block__content">
             <div class="gvtryon_product_edit_flow">
-
                 <ul>
                     <li>Go to Products Edit/New product page</li>
                     <li>Scroll down to metabox(fields group) titled with "GFit Virtual Frames"</li>
@@ -32,14 +27,12 @@ defined('ABSPATH') || exit;
                         position and save product again</li>
                     <li>That's it your frame is ready to make happy your customers.</li>
                 </ul>
-                <img src="<?php echo GVTRYON_PLUGIN_URL; ?>/assets/img/product_edit_frame_metabox.png" alt="" />
+                <img src="<?php echo esc_url(GVTRYON_PLUGIN_URL); ?>/assets/img/product_edit_frame_metabox.png" alt="" />
             </div>
         </div>
     </div>
     <div class="gvtryon_content_block">
-        <h2 class="gvtryon_content_block__title">
-            <?php echo __("Have a new Idea, Contact Us !", 'gfit-vitrual-tryon'); ?>
-        </h2>
+        <h2 class="gvtryon_content_block__title">Have a new Idea, Contact Us !</h2>
         <div class="gvtryon_content_block__content">
             <p>If you require assistance with customizations or wish to hire a developer, please feel free to contact us
                 via email.</p>

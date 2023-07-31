@@ -6,7 +6,7 @@ if (!defined('ABSPATH'))
 // Register meta box for food_locker post type
 function gvtryon_set_frame_upload_metabox()
 {
-	add_meta_box('gvtryon_frame_upload_meta_box', __('GFit Virtual Frames', 'gfit-vitrual-tryon'), 'gvtryon_frame_uplod_meta_box_callback', 'product', 'normal', 'low');
+	add_meta_box('gvtryon_frame_upload_meta_box', __('GFit Virtual Frames', 'gfit-virtual-tryon'), 'gvtryon_frame_uplod_meta_box_callback', 'product', 'normal', 'low');
 }
 add_action('add_meta_boxes', 'gvtryon_set_frame_upload_metabox');
 
@@ -25,17 +25,17 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 	<div style="display: block;padding: 10px;border-bottom: 1px solid #333;">
 		<label for="gvtryon_frame_width">Frame Width: </label>
 		<input id="gvtryon_frame_width" name="gvtryon_frame_width" type="number" min="80" max="250"
-			value="<?php echo $gvtryon_frame_width; ?>" />
+			value="<?php echo esc_html($gvtryon_frame_width); ?>" />
 		<small>
-			<?php echo __('mm', 'gfit-vitrual-tryon'); ?>
+			<?php echo esc_html(__('mm', 'gfit-virtual-tryon')); ?>
 		</small>
 	</div>
 	<div style="display: block;padding: 10px;border-bottom: 1px solid #333;">
 		<label for="gvtryon_standard_face_width">Standard Fase Width: </label>
 		<input id="gvtryon_standard_face_width" name="gvtryon_standard_face_width" type="number"
-			value="<?php echo $gvtryon_standard_face_width; ?>" />
+			value="<?php echo esc_html($gvtryon_standard_face_width); ?>" />
 		<small>
-			<?php echo __('mm', 'gfit-vitrual-tryon'); ?>
+			<?php echo esc_html(__('mm', 'gfit-virtual-tryon')); ?>
 		</small>
 
 	</div>
@@ -49,10 +49,10 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 			</div>
 		</div>
 		<small>
-			<?php echo __('Upload frames with png format and transparent background', 'gfit-vitrual-tryon'); ?>
+			<?php echo esc_html(__('Upload frames with png format and transparent background', 'gfit-virtual-tryon')); ?>
 		</small>
 		<p id="gvtryon_reload_message" style="width: 100%; color:  #ff0000; margin: 10px 0;display: none;">
-			<?php echo __('Please Save/Update Product to view/Edit frame position', 'gfit-vitrual-tryon'); ?>
+			<?php echo esc_html(__('Please Save/Update Product to view/Edit frame position', 'gfit-virtual-tryon')); ?>
 		</p>
 
 		<script>
@@ -86,29 +86,29 @@ function gvtryon_frame_uplod_meta_box_callback($post)
 			</div>
 			<div class="gvtryon_hidden_inputs">
 				<label style="display: block;">
-					<strong><?php echo __("Width :", "gfit-vitrual-tryon"); ?> </strong>
+					<strong><?php echo esc_html(__("Width :", "gfit-virtual-tryon")); ?> </strong>
 					<input id="frameWidthO" name="frameWidthO" placeholder="Frame width in px" />
 				</label>
 				<label style="display: block;">
-					<strong><?php echo __("Height :", "gfit-vitrual-tryon"); ?></strong>
+					<strong><?php echo esc_html(__("Height :", "gfit-virtual-tryon")); ?></strong>
 					<input id="frameHeightO" name="frameHeightO" placeholder="Frame height in px" />
 				</label>
 				<label style="display: block;">
-					<strong><?php echo __("PositionX :", "gfit-vitrual-tryon"); ?></strong>
+					<strong><?php echo esc_html(__("PositionX :", "gfit-virtual-tryon")); ?></strong>
 					<input id="frameMiddelPointX" name="frameMiddelPointX" placeholder="Frame left position"
 						disabled="true" />
 				</label>
 				<label style="display: block;">
-					<strong><?php echo __("PositionY :", "gfit-vitrual-tryon"); ?> </strong>
+					<strong><?php echo esc_html(__("PositionY :", "gfit-virtual-tryon")); ?> </strong>
 					<input id="frameMiddelPointY" name="frameMiddelPointY" placeholder="Frame top position" />
 				</label>
 				<label style="display: block;">
-					<strong><?php echo __("StandardEyeLine :", "gfit-vitrual-tryon"); ?> </strong>
+					<strong><?php echo esc_html(__("StandardEyeLine :", "gfit-virtual-tryon")); ?> </strong>
 					<input id="StandardEyeLine" name="StandardEyeLine" placeholder="StandardEyeLine" disabled="true" />
 				</label>
 				<label style="display: block;">
-					<strong><?php echo __("DiffY :", "gfit-vitrual-tryon"); ?> </strong>
-					<input id="diffY" name="gvtryon_diffY" placeholder="diffY" value="<?php echo $diffY; ?>" />
+					<strong><?php echo esc_html(__("DiffY :", "gfit-virtual-tryon")); ?> </strong>
+					<input id="diffY" name="gvtryon_diffY" placeholder="diffY" value="<?php echo esc_html($diffY); ?>" />
 				</label>
 			</div>
 		</div>

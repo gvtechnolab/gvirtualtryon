@@ -15,7 +15,7 @@ function gvtryon_popup_callback_primary()
 	if ($url) {
 	?>
 		<button id="gvtryon_button" type="button" name="gv_tryon" class="button alt wp-element-button">
-		<?php echo __('GFit Virtual TryOn', 'gfit-vitrual-tryon'); ?>
+		<?php echo esc_html(__('GFit Virtual TryOn', 'gfit-virtual-tryon')); ?>
 		</button>
 		<div id="gvtryon_modal" class="gvtryon-modal-wrap">
 			<div id="gvtryon_modal_inner">
@@ -23,7 +23,7 @@ function gvtryon_popup_callback_primary()
 					<div class="gvtryon_header">
 						<button type="button" id="gvtryon_close_button">&times;</button>
 						<h3>
-							<?php echo __('GFit Virtual TryOn', 'gfit-vitrual-tryon'); ?>
+							<?php echo esc_html(__('GFit Virtual TryOn', 'gfit-virtual-tryon')); ?>
 						</h3>
 						<span></span>
 					</div>
@@ -32,12 +32,12 @@ function gvtryon_popup_callback_primary()
 							<li class="active">
 								<div class="frame_info">
 									<h5>
-										<?php echo get_the_title($post->ID); ?>
+										<?php echo esc_html(get_the_title($post->ID)); ?>
 									</h5>
 									<img id="frameimage"
-										data-gvtryon_standard_face_width="<?php echo $gvtryon_standard_face_width; ?>"
-										data-width="<?php echo $gvtryon_frame_width; ?>" src="<?php echo esc_url($url); ?>"
-										data-diffY="<?php echo $gvtryon_diffY; ?>" alt="" />
+										data-gvtryon_standard_face_width="<?php echo esc_html($gvtryon_standard_face_width); ?>"
+										data-width="<?php echo esc_html($gvtryon_frame_width); ?>" src="<?php echo esc_url($url); ?>"
+										data-diffY="<?php echo esc_html($gvtryon_diffY); ?>" alt="" />
 									<?php /* <strong>Frame Width: <em><?php echo $gvtryon_frame_width; ?>mm</em></strong> */?>
 								</div>
 							</li>
@@ -107,7 +107,7 @@ function gvtryon_popup_callback_primary()
 						</ul>
 						<?php /* ?> <div class="static_errorPopup tooltip">Info
 							<span class="tooltiptext">
-								<?php // echo __('GFit Virtual try-on works only on Chrome, Opera and Safari browsers', 'gfit-vitrual-tryon'); ?>
+								<?php // echo __('GFit Virtual try-on works only on Chrome, Opera and Safari browsers', 'gfit-virtual-tryon'); ?>
 							</span>
 						</div> <?php */ ?>
 					</div>
