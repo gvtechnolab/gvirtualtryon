@@ -1,0 +1,15 @@
+{
+    "name": "ssd/gfit_virtual_tryon",
+    "autoload": {
+        "psr-4": {
+            "Ssd\\GFITVIRTUALTRYON\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "girirajsinh",
+            "email": "gvgohil232@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -95,6 +95,10 @@ function gvtryon_admin_enqueue_scripts()
 
     wp_enqueue_script('facemeshmodels-js', GVTRYON_PLUGIN_URL . 'assets/js/facemesh.js', array(), '', false);
     wp_enqueue_script('admin-canvas-js', GVTRYON_PLUGIN_URL . 'assets/js/adminScript.js', array('jquery'), '', true);
+
+    wp_enqueue_style( 'woo_advanced_group_product-a-style', plugin_dir_url( __FILE__ ) . '../build/index.css' );
+    wp_enqueue_script( 'woo_advanced_group_product-a-script', plugin_dir_url( __FILE__ ) . '../build/index.js', array( 'wp-element' ), '1.0.0', true );
+    
 }
 
 if (!function_exists('gvtryon_install')) {
